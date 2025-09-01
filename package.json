@@ -1,9 +1,10 @@
 {
-  "name": "pheraas",
+  "name": "catapp",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
     "start": "EXPO_NO_DOTENV=1 expo start",
+    "preinstall": "npx only-allow pnpm",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
@@ -26,6 +27,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
+    "@gorhom/bottom-sheet": "^5.2.4",
     "@react-native-async-storage/async-storage": "^2.2.0",
     "@react-navigation/bottom-tabs": "^7.3.10",
     "@react-navigation/elements": "^2.3.8",
@@ -47,9 +49,11 @@
     "expo-symbols": "~0.4.5",
     "expo-system-ui": "~5.0.9",
     "expo-web-browser": "~14.2.0",
+    "ky": "^1.9.1",
     "nativewind": "^4.1.23",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-hook-form": "^7.62.0",
     "react-native": "0.79.4",
     "react-native-gesture-handler": "~2.24.0",
     "react-native-mmkv": "^3.3.0",
@@ -68,6 +72,7 @@
     "@commitlint/format": "^19.8.1",
     "@commitlint/types": "^19.8.1",
     "@eslint/js": "^9.29.0",
+    "@hookform/resolvers": "^5.2.1",
     "@types/react": "~19.0.10",
     "@typescript-eslint/parser": "^8.35.0",
     "babel-plugin-module-resolver": "^5.0.2",
@@ -84,6 +89,7 @@
     "globals": "^16.2.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
+    "only-allow": "^1.2.1",
     "prettier": "3.6.0",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "reactotron-react-native": "^5.1.14",
@@ -91,6 +97,10 @@
     "ts-node": "^10.9.2",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.0"
+  },
+  "engines": {
+    "npm": "please-use-pnpm",
+    "pnpm": ">=10.12.2"
   },
   "private": true
 }
