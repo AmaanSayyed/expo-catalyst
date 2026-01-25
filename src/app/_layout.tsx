@@ -1,14 +1,45 @@
 import '../../global.css';
 
 import { useFonts } from 'expo-font';
-import { SplashScreen, Stack } from 'expo-router';
+import { SplashScreen, Stack, useRouter, useSegments } from 'expo-router';
 import { useEffect } from 'react';
 
+import { Providers } from '@/context';
+import { useAuthStore } from '@/lib/store';
+
+function useProtectedRoute() {
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const segments = useSegments();
+  const router = useRouter();
+
+  useEffect(() => {
+    const inAuthGroup = segments[0] === '(auth)';
+
+    if (!isAuthenticated && !inAuthGroup) {
+      router.replace('/login');
+    } else if (isAuthenticated && inAuthGroup) {
+      router.replace('/(tabs)');
+    }
+  }, [isAuthenticated, segments, router]);
+}
+
+function RootLayoutNav() {
+  useProtectedRoute();
+
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="(tabs)" />
+      <Stack.Screen name="(auth)" />
+    </Stack>
+  );
+}
+
+export { ErrorBoundary } from 'expo-router';
 export default function RootLayout() {
   if (__DEV__) {
     require('../../ReactotronConfig');
   }
-  // Load fonts and error if the load fails
+
   const [fontsLoaded, error] = useFonts({
     'Poppins-Black': require('../../assets/fonts/Poppins-Black.ttf'),
     'Poppins-Bold': require('../../assets/fonts/Poppins-Bold.ttf'),
@@ -21,7 +52,6 @@ export default function RootLayout() {
     'Poppins-Thin': require('../../assets/fonts/Poppins-Thin.ttf'),
   });
 
-  //handle loading on render
   useEffect(() => {
     if (error) throw error;
 
@@ -34,5 +64,9 @@ export default function RootLayout() {
     return null;
   }
 
-  return <Stack />;
+  return (
+    <Providers>
+      <RootLayoutNav />
+    </Providers>
+  );
 }

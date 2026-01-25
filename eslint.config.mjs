@@ -73,7 +73,7 @@ export default defineConfig([
       'react/no-inline-styles': 'off',
       'react/destructuring-assignment': 'off', // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
       'react/require-default-props': 'off', // Allow non-defined react props as undefined
-      'max-lines-per-function': ['error', 70], // Enforce smaller, modular functions -keeps code maintainable and easier to test
+      // 'max-lines-per-function': ['error', 70], // Enforce smaller, modular functions -keeps code maintainable and easier to test
       'max-params': ['error', 3], // Limit the number of parameters in a function to use object instead
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',

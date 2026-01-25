@@ -1,1 +1,1 @@
-// components setup
+export * from './ui';
