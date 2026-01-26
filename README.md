@@ -1,50 +1,202 @@
-# Welcome to your Expo app 👋
+# 🚀 Expo Starter Template
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A **production-ready React Native Expo starter template** designed to kickstart new projects with best practices, modern tooling, and a scalable architecture — so you can focus on building features, not boilerplate.
 
-## Get started
+Built with **Expo SDK 54**, **Expo Router**, **TypeScript**, **NativeWind**, and a carefully curated set of libraries I use across projects.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## ✨ Features
 
-2. Start the app
+- ⚡ **Expo SDK 54** with Expo Router
+- 🧭 **File-based routing** using `expo-router`
+- 🎨 **NativeWind (Tailwind CSS)** for styling
+- 🧠 **Zustand** for lightweight state management
+- 🔄 **TanStack Query** for server state & caching
+- 💾 **MMKV** for fast local storage
+- 📋 **React Hook Form + Zod** for forms & validation
+- 📱 **FlashList** for high-performance lists
+- 🧩 **Bottom Sheets** via `@gorhom/bottom-sheet`
+- 🛠️ **Strict linting & formatting**
+- 🧪 **Git hooks, Commitizen & Commitlint**
+- 📦 **PNPM-only setup** (enforced)
+- 🌍 Web support via `react-native-web`
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🧱 Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+**Core**
+- React 19
+- React Native 0.81
+- Expo SDK 54
+- TypeScript
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+**Navigation**
+- Expo Router
+- React Navigation (Tabs, Native)
 
-## Get a fresh project
+**State & Data**
+- Zustand
+- TanStack Query
+- MMKV
+- Async Storage
 
-When you're ready, run:
+**UI & Styling**
+- NativeWind (Tailwind CSS)
+- Expo Image, Blur, Haptics
+- Vector Icons
+- Bottom Sheet
+
+**Tooling**
+- ESLint + Prettier
+- Husky + Lint-Staged
+- Commitizen + Commitlint
+- PNPM enforced
+
+---
+
+## 📁 Project Structure
+
+```txt
+app/                # Expo Router routes
+components/         # Reusable UI components
+hooks/              # Custom hooks
+store/              # Zustand stores
+lib/                # Utilities, API clients
+constants/          # App constants
+assets/             # Fonts, images
+````
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repo
 
 ```bash
-npm run reset-project
+git clone <repo-url>
+cd <project-name>
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2️⃣ Install dependencies (PNPM only)
 
-## Learn more
+```bash
+pnpm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+> ❗ NPM & Yarn are blocked intentionally to ensure consistency.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 3️⃣ Start the app
 
-## Join the community
+```bash
+pnpm start
+```
 
-Join our community of developers creating universal apps.
+Run on a specific platform:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+pnpm android
+pnpm ios
+pnpm web
+```
+
+---
+
+## 🧪 Scripts
+
+| Script         | Description             |
+| -------------- | ----------------------- |
+| `pnpm start`   | Start Expo dev server   |
+| `pnpm android` | Run on Android          |
+| `pnpm ios`     | Run on iOS              |
+| `pnpm web`     | Run on web              |
+| `pnpm lint`    | Run ESLint              |
+| `pnpm doctor`  | Expo health check       |
+| `pnpm commit`  | Commit using Commitizen |
+
+---
+
+## 🧹 Code Quality
+
+* **ESLint** with Expo & custom rules
+* **Prettier** with Tailwind plugin
+* **Lint-staged** auto-fix on commit
+* **Commitlint** enforcing conventional commits
+
+Example commit:
+
+```bash
+pnpm commit
+```
+
+---
+
+## 🌱 Environment Variables
+
+This template disables auto-dotenv loading:
+
+```bash
+EXPO_NO_DOTENV=1
+```
+
+You can manage envs manually or plug in your own env strategy as needed.
+
+---
+
+## 🧩 Why this template?
+
+I created this template to:
+
+* Avoid repeating setup work on every new Expo project
+* Start with **sane defaults & production-grade tooling**
+* Scale from MVP → production without refactoring basics
+* Maintain **developer experience** and consistency
+
+If you build multiple apps with Expo — this saves **hours** every time.
+
+---
+
+## 📌 Usage
+
+Feel free to:
+
+* Fork it
+* Clone it
+* Customize it
+* Use it internally for client or personal projects
+
+> This repo is marked `private` by default — adjust as needed.
+
+---
+
+## 🛠️ Future Enhancements (Planned)
+
+* Auth starter (Amplify / Appwrite / Firebase)
+* App theming system
+* API layer abstraction
+* Feature-based folder example
+* CI pipeline example
+
+---
+
+## 📄 License
+
+MIT (or update if needed)
+
+---
+
+### ⭐ If this template helped you, consider starring the repo
+
+```
+
+---
+
+If you want, next we can:
+- 🔥 Convert this into a **`create-expo-yourname` CLI**
+- 📦 Add **TurboRepo / monorepo support**
+- 🧩 Add **feature-based folder architecture**
+- 🧪 Add **testing (Jest + RTL)**
+
+Just tell me the direction 👀
+```
