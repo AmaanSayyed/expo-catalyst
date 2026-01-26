@@ -190,13 +190,3 @@ MIT (or update if needed)
 
 ```
 
----
-
-If you want, next we can:
-- 🔥 Convert this into a **`create-expo-yourname` CLI**
-- 📦 Add **TurboRepo / monorepo support**
-- 🧩 Add **feature-based folder architecture**
-- 🧪 Add **testing (Jest + RTL)**
-
-Just tell me the direction 👀
-```
