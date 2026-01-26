@@ -187,6 +187,3 @@ MIT (or update if needed)
 ---
 
 ### ⭐ If this template helped you, consider starring the repo
-
-```
-
