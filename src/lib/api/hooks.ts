@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { api } from './index';
+import { api } from './client';
 
 export interface Product {
   id: number;
