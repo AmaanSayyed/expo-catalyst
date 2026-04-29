@@ -2,16 +2,10 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@env": [
-        "./src/lib/env.js"
-      ]
-    },
-    
+      "@/*": ["./src/*"],
+      "@env": ["./src/lib/env.js"]
+    }
   },
   "exclude": [
     "node_modules",
@@ -20,11 +14,7 @@
     "docs",
     "cli",
     "android",
-    "ios",
+    "ios"
   ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "nativewind-env.d.ts"
-, "env.js"  ]
+  "include": ["**/*.ts", "**/*.tsx", "nativewind-env.d.ts", "env.js"]
 }
