@@ -1,5 +1,16 @@
 # 🚀 Expo Catalyst
 
+[![Expo SDK](https://img.shields.io/badge/Expo-54-000020.svg?style=flat-square&logo=expo&logoColor=white)](https://expo.dev/)
+[![React Native](https://img.shields.io/badge/React%20Native-0.81-61DAFB.svg?style=flat-square&logo=react&logoColor=white)](https://reactnative.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6.svg?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![NativeWind](https://img.shields.io/badge/NativeWind-4.1-06B6D4.svg?style=flat-square&logo=tailwindcss&logoColor=white)](https://www.nativewind.dev/)
+[![TanStack Query](https://img.shields.io/badge/TanStack%20Query-5.81-FF4154.svg?style=flat-square&logo=react-query&logoColor=white)](https://tanstack.com/query)
+[![Zod](https://img.shields.io/badge/Zod-3.25-3E67B1.svg?style=flat-square&logo=zod&logoColor=white)](https://zod.dev/)
+[![Ky](https://img.shields.io/badge/Ky-1.9-00D9FF.svg?style=flat-square)](https://github.com/sindresorhus/ky)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+[![PNPM](https://img.shields.io/badge/PNPM-10.12+-F69220.svg?style=flat-square&logo=pnpm&logoColor=white)](https://pnpm.io/)
+[![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20Android%20%7C%20Web-4630EB.svg?style=flat-square&logo=expo&logoColor=white)](https://expo.dev/)
+
 A **production-ready React Native Expo starter template** designed to kickstart new projects with best practices, modern tooling, and a scalable architecture — so you can focus on building features, not boilerplate.
 
 Built with **Expo SDK 54**, **Expo Router**, **TypeScript**, **NativeWind**, and a carefully curated set of libraries battle-tested across multiple projects.
