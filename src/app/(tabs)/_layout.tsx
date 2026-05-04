@@ -1,9 +1,18 @@
 import { Icon, Label, NativeTabs } from 'expo-router/unstable-native-tabs';
 
+import { useTheme } from '@/lib/store';
+
 export default function TabsLayout() {
+  const { colors, isDark } = useTheme();
+
   return (
     <NativeTabs
-      blurEffect="systemDefault"
+      key={isDark ? 'dark' : 'light'}
+      backgroundColor={colors.surface}
+      tintColor={colors.primary}
+      blurEffect={
+        isDark ? 'systemChromeMaterialDark' : 'systemChromeMaterialLight'
+      }
       disableTransparentOnScrollEdge={true}
     >
       <NativeTabs.Trigger name="index">
